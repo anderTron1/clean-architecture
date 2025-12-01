@@ -457,7 +457,6 @@ disable=raw-checker-failed,
 # it should appear only once). See also the "--disable" option for examples.
 
 enable =
-         E0015, # unrecongnized-option
          W0703, # Cathing too general exception Exception
          C0209, # Consider-using-f-string
          C0321, # Multiple-statements
