@@ -13,3 +13,11 @@ repos:
             "--rcfile=.pylintrc", # Link to your config file 
             "--load-plugins=pylint.extensions.docparams", # Load the docparams plugin
           ]
+  - repo: local 
+    hooks:
+      - id: requirements 
+        name: requirements
+        entry: bash -c '.\venv\Scripts\pip3.exe freeze > requirements.txt; git add requirements.txt'
+        language: system 
+        pass_filenames: false 
+        stages: [commit]
