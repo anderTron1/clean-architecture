@@ -4,7 +4,7 @@ from sqlalchemy.orm import sessionmaker
 class DBConnectionHandler:
     def __init__(self) -> None:
         self.__connection_string = (
-            "postgresql://postgres:123@localhost:5432/clean_database"
+            "postgresql://postgres:123@host.docker.internal:5433/clean_database"
         )
         self.__engine = self.__create_database_engine()
         self.session = None
